@@ -26,18 +26,25 @@
 		else { header.removeClass('fixed-style');}
     })
 
-    $(".readmore").on('click', function(){
-        let start = $(this).data('start-txt');
-        let toggletxt = $(this).data('toggle-txt');
-        $(this).toggleText(start, toggletxt);
-        $(this).parent().find('p').toggleClass('showed');
+    $(".product-title .readmore").on('click', function(){
+        $(this).removeClass('showed');
+        $(this).parents(".product-title").find('p').addClass('showed');
+        $(".product-title .hidemore").addClass('showed');
+    })
+
+    $(".product-title .aboutmore").on('click', function(){
+        $(this).removeClass('showed');
+        $(this).parents(".product-title").find('p').addClass('showed');
+        $(".product-title .hidemore").addClass('showed');
+    })
+
+    $(".product-title .hidemore").on('click', function(){
+        $(this).removeClass('showed');
+        $(this).parents(".product-title").find('p').removeClass('showed');
+        $(".product-title .readmore").addClass('showed');
+        $(".product-title .aboutmore").addClass('showed');
     })
 
 
 })()
 
-$.fn.extend({
-    toggleText: function(a, b){
-        return this.text(this.text() === b ? a : b);
-    }
-});

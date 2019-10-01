@@ -42,7 +42,7 @@
               <a href=""><img src="css/images/logo.svg" alt=""/></a>
             </div>
           </div>
-          <div class="col-4 col-md-5">
+          <div class="col-4 col-md-5 no-relative">
             <div class="main-info">
               <div class="profile">
                 <a href="#"><span class="icon-account"></span></a>
@@ -119,10 +119,11 @@
           <div class="col-12 col-sm-8 col-md-6">
             <div class="product-title">
               <h1>Мужская голубая рубашка “Slim”</h1>
+              <a class="aboutmore showed">Подробнее...</a>
               <p>
                 Наши рубашки - отличный выбор на каждый день. Мы долго искали
                 наиболее подходящую ткань, она приятная, слегка тянется, не
-                сильно мнется и при носке, чувствуется только комфорт
+                сильно мнется и при носке, чувствуется только комфорт. <a class="readmore showed">Подробнее...</a>
               </p>
               <p>
                 Наши рубашки - отличный выбор на каждый день. Мы долго искали
@@ -134,7 +135,7 @@
                 наиболее подходящую ткань, она приятная, слегка тянется, не
                 сильно мнется и при носке, чувствуется только комфорт
               </p>
-              <a class="readmore" data-start-txt="Подробнее" data-toggle-txt="Скрыть">Подробнее</a>
+              <a class="hidemore">Скрыть</a>
             </div>
             <!-- <div class="separate-border"></div> -->
             <div class="row justify-content-center parametrs">
@@ -192,26 +193,26 @@
               </div>
             </div>
             <div class="separate-border"></div>
-            <div class="shirtsID">
-              <div class="shirtsID-block">
+            <div class="row shirtsID">
+              <div class="shirtsID-block col-12 col-md-6 col-lg-4">
                 <a href="" class="shirtsID-btn">
                   <img src="css/images/shirtsid.svg" alt="" />
                 </a>
               </div>
-              <p>
+              <p class="col-12 col-md-6 col-lg-8">
                 Хочешь что-то действительно особенное – добавь инициалы, либо
                 цвет ниток для пуговицы
               </p>
             </div>
             <div class="separate-border"></div>
             <div class="row cart-add">
-              <div class="total-price col-4 col-lg-3">
+              <div class="total-price col-6 col-lg-3">
                 <p>
                   <b>1500</b> грн <br />
                   <b>6</b> по цене 5
                 </p>
               </div>
-              <div class="amount col-4 col-lg-3">
+              <div class="amount col-6 col-lg-3">
                 <div class="amount-form">
                   <span class="icon-minus amount-minus"></span>
                   <input
@@ -242,7 +243,14 @@
                   <label class="custom-control-label" for="delivery"
                     >Доставить за 1 час 
                   </label>
-                  <span class="icon-question"></span>
+                  <span class="dropdown">
+                    <span class="icon-question dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+                    <span class="dropdown-menu">
+                      <p>Стоимость не включена в цену. <b>(Доставка платная)</b> Стоимость доставки варьируется от заказа к заказу (Зависит от удалённости от центра города)</p>
+                      <p>Доставка за 1 час только в пределах города Киева</p>
+                    </span>
+                  </span>
+                  
                 </div>
                 <p class="only">только по Киеву</p>
               </div>

@@ -28,6 +28,10 @@ header.fixed-style {
     padding: 5px 0;
 }
 
+.no-relative {
+    position: static;
+}
+
 main {
     padding-top:85px;
 }
@@ -272,10 +276,23 @@ main {
     display: block;
 }
 
-.product-title .readmore {
+.product-title .readmore,
+.product-title .hidemore,
+.product-title .aboutmore {
+    margin-bottom: 10px;
+    display: none;
     font-size: 14px;
     text-decoration: underline !important;
     cursor: pointer;
+}
+
+.product-title .readmore.showed,
+.product-title .hidemore.showed {
+    display: inline-block;
+}
+
+.product-title .aboutmore {
+    display: none;
 }
 
 .parametrs {
@@ -308,7 +325,7 @@ main {
     background: #f4f4f4;
     border-radius: 4px;
     color: var(--main-blue);
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 .variant .border-deco {
@@ -370,11 +387,13 @@ main {
 .shirtsID {
     padding: 10px 0;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     color:#666666;
 }
 
 .shirtsID-btn {
-    margin-right: 40px;
+    margin-bottom: 5px;
     display: inline-block;
     width: 120px;
     padding:9px 15px;
@@ -453,6 +472,37 @@ main {
 
 .in-cart .only {
     color: #999999;
+}
+
+.in-cart .icon-question {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.in-cart .icon-question::after {
+    display: none;
+}
+
+.in-cart .dropdown {
+    position: static;
+}
+
+.in-cart .dropdown-menu {
+    margin: 0 15px;
+    padding: 20px;
+}
+
+.in-cart .dropdown-menu.show {
+    top: auto !important;
+}
+
+.in-cart .dropdown-menu p {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.in-cart .dropdown-menu p:last-child {
+    margin:0;
 }
 
 
@@ -620,5 +670,34 @@ summary::-webkit-details-marker {
     .main-info .price > a,
     .main-info .price > a b {
         font-size: 0px;
+    }
+
+    .shirtsID {
+        text-align: center;
+    }
+
+    .characteristicks dl {
+        grid-template-columns: 140px 1fr;
+    }
+
+    .lang.dropdown {
+        position: absolute;
+        left: calc(10% + (10% - 50px));
+    }
+
+    .lang .dropdown-menu.show {
+        left: 0 !important;
+    }
+
+    .product-title .readmore.showed {
+        display: none;
+    }
+
+    .product-title .aboutmore.showed {
+        display: inline-block;
+    }
+
+    .product-title p:first-of-type {
+        display: none;
     }
 }
