@@ -1,5 +1,5 @@
 :root{
-    --main-black: #000000;
+    --main-black: #231f20;
     --main-blue: #194699;
     --main-gray:#cccccc;
 }
@@ -12,7 +12,12 @@ p {
     font-size: 14px;
 }
 
+a {
+    color: var(--main-blue);
+}
+
 a:hover {
+    color: var(--main-blue);
     text-decoration: none;
 }
 
@@ -30,6 +35,13 @@ header.fixed-style {
 
 .no-relative {
     position: static;
+}
+
+.zIndex1 {
+    z-index: 1;
+}
+.zIndex0{
+    z-index: 0;
 }
 
 main {
@@ -662,6 +674,188 @@ summary::-webkit-details-marker {
     color: #ffffff;
 }
 
+.home-wrapper {
+    padding-top:45px;
+    overflow: hidden;
+}
+
+.main-shirt-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.main-shirt-block img {
+    max-width: 100%;
+}
+
+.main-shirt-block a {
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    display: block;
+    width: 50%;
+}
+
+.main-shirt-block .light-shirt {
+    left: 0;
+}
+.main-shirt-block .blue-shirt {
+    right: 0;
+}
+
+/* .light-shirt:hover {
+    background: red;
+}
+.blue-shirt:hover {
+    background: blue;
+} */
+
+.left-shirt-side {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 100%;
+}
+
+.scale-on-hover {
+    will-change: transform;
+    transition: transform 200ms ease-in-out;
+    contain: content;
+}
+
+.scale-on-hover:hover {
+    transform: scale(1.02);
+}
+
+.slogan-main {
+    width: 335px;
+    margin-bottom: 30px;
+}
+
+.slogan-main h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 145%;
+    text-transform: uppercase;
+}
+
+.blue-deco span {
+    padding: 0 5px;
+    color: #fff;
+    background-color: var(--main-blue);
+}
+.black-deco span {
+    padding: 0 5px;
+    color: #fff;
+    background-color: var(--main-black);
+}
+
+.left-shirt-side .other-slogans {
+    text-align: right;
+}
+
+.other-slogans {
+    margin-bottom: 25px;
+}
+
+.other-slogans.right-pd40 {
+    padding-right: 40px;
+}
+
+.other-slogans h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 145%;
+    text-transform: uppercase;
+}
+
+.other-slogans h3 {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.other-slogans h4 {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* .other-slogans p {
+
+} */
+
+.choose h3 {
+    font-size: 18px;
+    font-weight:700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.choose > p {
+    margin-left: -30px;
+    margin-bottom: 40px;
+}
+
+.choose > p b {
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.choose > p span {
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.easy-choose {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    grid-row-gap: 20px;
+    margin-bottom: 40px;
+}
+
+.easy-choose > div {
+    text-align: center;
+}
+
+.easy-choose-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.easy-choose-element {
+    padding:10px;
+    color: var(--main-blue);
+    border:1px solid #cccccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
+    transition: transform 200ms ease-in-out;
+}
+
+.easy-choose-element:hover {
+    transform:translateY(-5px);
+}
+
+.easy-choose-element.blue {
+    background-color: #d9ecfc;
+}
+
+.easy-choose-element .icon {
+    display: block;
+    font-size: 32px;
+}
+
+.easy-choose-element .txt{
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:var(--main-black);
+}
+
 @media screen and (max-width:768px){
     .phone a {
         font-size: 0px;
@@ -699,5 +893,52 @@ summary::-webkit-details-marker {
 
     .product-title p:first-of-type {
         display: none;
+    }
+
+    .slogan-main {
+        width: 100%;
+    }
+
+    .slogan-main h1 {
+        font-size: 26px;
+    }
+
+    .other-slogans h2 {
+        font-size: 21px;
+    }
+    .other-slogans h3,
+    .other-slogans h4 {
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (max-width:576px){
+    .home-wrapper {
+        padding-top:20px;
+    }
+    .left-shirt-side .other-slogans {
+        text-align: left;
+    }
+    .other-slogans,
+    .other-slogans.right-pd40 {
+        padding-right: 35%;
+    }
+
+    .main-shirt-block {
+        position: absolute;
+        right: -120px;
+        width: 300px;
+    }
+
+    .other-slogans {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width:992px){
+    .left-shirt-side {
+        position: relative;
+        left: 0;
     }
 }
