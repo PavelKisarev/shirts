@@ -683,6 +683,7 @@ summary::-webkit-details-marker {
     position: relative;
     display: flex;
     justify-content: center;
+    animation:pulse 1500ms ease-in-out infinite;
 }
 
 .main-shirt-block img {
@@ -725,7 +726,7 @@ summary::-webkit-details-marker {
 }
 
 .scale-on-hover:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .slogan-main {
@@ -942,3 +943,15 @@ summary::-webkit-details-marker {
         left: 0;
     }
 }
+
+@-webkit-keyframes pulse {
+    0% { top:0; }
+    50% { top:-10px; }
+    100% { top:0; }
+  }
+  
+  @keyframes pulse {
+    0% { top:0; }
+    50% { top:-10px; }
+    100% { top:0; }
+  }

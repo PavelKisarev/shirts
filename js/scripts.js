@@ -59,7 +59,8 @@
         
     })
 
-    $('.main-shirt-block').myPlax();
+    $('.on-cursor').myPlax();
+    // $('.main-shirt-block').myPlax();
 
     // $.fn.myPlax = function(e){
     //     let coordX = e.pageX;
