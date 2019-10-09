@@ -45,36 +45,17 @@
         $(".product-title .aboutmore").addClass('showed');
     })
 
-    // $('.main-shirt-block').plaxmove({ratioH:0.01,ratioV:0.01})
-    // $(document).on('mousemove', function(e){
-    //     let coordX = e.pageX;
-    //     let coordY = e.pageY;
-    //     let halfWidth = $(document).width() / 2;
-    //     let halfHeight = $(document).height() / 2;
-    //     let xPos = (coordX - halfWidth)*0.03;
-    //     let yPos = (coordY - halfHeight)*0.03;
-    //     $('.main-shirt-block').css({'top':yPos,'left':xPos});
-    // })
-    $(document).on('mousemove', function(e){
-        
+    $(".personal-form input, .personal-form textarea").focusin(function(){
+        $(this).parent().find("label").addClass("active");
+    })
+    
+    $(".personal-form input, .personal-form textarea").focusout(function(){
+        if($(this).val() === ""){
+            $(this).parent().find("label").removeClass("active");
+        }
     })
 
     $('.on-cursor').myPlax();
-    // $('.main-shirt-block').myPlax();
-
-    // $.fn.myPlax = function(e){
-    //     let coordX = e.pageX;
-    //     let coordY = e.pageY;
-    //     let halfWidth = $(document).width() / 2;
-    //     let halfHeight = $(document).height() / 2;
-    //     let xPos = (coordX - halfWidth)*0.03;
-    //     let yPos = (coordY - halfHeight)*0.03;
-    //     $(this).css({'top':yPos,'left':xPos});
-    // }
-    // $(document).on('mousemove', function(e){
-    //     $('.main-shirt-block').myPlax(e);
-    // })
-   
 })()
 
 

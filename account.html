@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Account</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <div class="container">
+        <div class="row align-items-center ">
+          <div class="d-none d-lg-block col-lg-2 col-xl-1">
+            <div class="social-links">
+              <a href="#"><span class="icon-social-facebook"></span></a>
+              <a href="#"><span class="icon-social-instagram"></span></a>
+            </div>
+          </div>
+          <div class="col-2 offset-2 offset-md-0 col-md-5 col-lg-3 col-xl-4">
+            <div class="phone">
+              <a href="tel:+38044853880"
+                ><span class="icon-phone d-md-none"></span>+38 (044) 853 88 0</a
+              >
+            </div>
+          </div>
+          <div class="col-4 col-md-2">
+            <div class="logo">
+              <a href=""><img src="css/images/logo.svg" alt=""/></a>
+            </div>
+          </div>
+          <div class="col-4 col-md-5 no-relative">
+            <div class="main-info">
+              <div class="profile">
+                <a class="active" href="#"><span class="icon-account"></span></a>
+              </div>
+              <div class="price dropdown">
+                <a
+                  href="#"
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  ><span class="icon-cart"><span class="index">2</span></span>
+                  <b>1500</b> грн</a
+                >
+                <div class="dropdown-menu">
+                  <div class="order">
+                    <div class="order-txt">
+                      <span class="icon-close-bold"></span>
+                      <p>
+                        голубая рубашка <br />
+                        “standarD”
+                      </p>
+                      <p><b>1</b> x <b>1500</b> грн</p>
+                    </div>
+                    <img src="css/images/shirt.png" alt="" />
+                  </div>
+                  <div class="separate-border"></div>
+                  <div class="total-price">
+                    <span>Итого</span> <span> <b>1500</b> грн</span>
+                  </div>
+                  <div class="separate-border"></div>
+                  <a href="#" class="main-btn">Оформить заказ</a>
+                </div>
+              </div>
+              <div class="lang dropdown">
+                <a
+                  class=" dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Рус</a
+                >
+                <div class="dropdown-menu">
+                  <a class="dropdown-item active" href="#">Русский</a>
+                  <a class="dropdown-item" href="#">Українська</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="row">
+          <div class="col-12">
+              <div class="page-title">
+                  <h1>Личный кабинет</h1>
+              </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="wrap-block with-bg">
+            <div class="block-title">
+              <h3>Персональные данные</h3>
+            </div>
+            <form class="personal-form" action="" method="">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputName">Имя</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputSurname">Фамилия</label>
+                  <input type="text" class="form-control" id="inputSurname" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPhone">Телефон</label>
+                  <input type="tel" class="form-control" id="inputPhone" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEmail">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword">Пароль</label>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPasswordRepeat">Повтор пароля</label>
+                  <input type="password" class="form-control" id="inputPasswordRepeat" placeholder="">
+                </div>
+                <p class="col-12 short-descr">Чтобы изменить текущий пароль, укажите новый пароль в обоих полях.</p>
+                <div class="form-group col-12">
+                  <label for="inputAddress">Город</label>
+                  <input type="text" class="form-control" id="inputCity" placeholder="">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-4">
+                  <label class="dark-txt" for="">Адрес получателя</label>
+                </div>
+                <div class="form-group col-4">
+                  <label for="">Улица</label>
+                  <input type="text" class="form-control" id="inputStreet" placeholder="">
+                </div>
+                <div class="form-group col">
+                  <label for="">Дом</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="form-group col">
+                  <label for="">Квартира</label>
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+              </div>
+
+              <div class="form-row justify-content-center">
+                <div class="form-group"><button type="submit" class="btn main-btn">Сохранить</button></div>
+              </div>
+            </form>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+              <div class="wrap-block">
+              <div class="block-title">
+                <h3>История заказов</h3>
+              </div>
+              <div class="order-table">
+                <div class="table-row">
+                  <div class="table-cell">дата	</div>
+                  <div class="table-cell">название товара	</div>
+                  <div class="table-cell">кол-во</div>
+                  <div class="table-cell">итого</div>
+                </div>
+                <div class="table-row">
+                  <div class="table-cell date">25.05.2019</div>
+                  <div class="table-cell">
+                      <div class="order">
+                        <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
+                        <div class="order-txt">
+                        <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+                        </div>
+                        <p class="quantity"> <b>1</b> </p>
+                      </div>
+                  </div>
+                  
+                  <div class="table-cell all">
+                    <div class="">
+                    <p><b>3000 </b><small> грн</small></p>
+                    <a href="" class="main-btn sm">Повторить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="table-cell date">25.05.2019</div>
+                  <div  class="table-cell">
+                    <div class="order">
+                      <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
+                      <div class="order-txt">
+                      <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+                      </div>
+                      <p class="quantity"> <b>2</b> </p>
+                    </div>
+                    <div class="order">
+                      <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
+                      <div class="order-txt">
+                        <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+                        <a href="" class="shirtsID-btn"><img src="css/images/shirtsid.svg" alt="" /></a>
+                        <p><span class="icon-bullet"> </span> <b>нанесение инициалов</b></p>
+                        <p class="lp20"><span><b>«DV»</b>, на Грудь, Шрифт №1, Синий цвет ниток </span></p>
+                      </div>
+                      <p class="quantity"> <b>1</b> </p>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="table-cell all">
+                    <div class="">
+                    <p><b>4500 </b><small> грн</small></p>
+                    <a href="" class="main-btn sm">Повторить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="table-cell date">25.05.2019</div>
+                  <div class="table-cell">
+                      <div class="order">
+                        <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
+                        <div class="order-txt">
+                        <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+                        </div>
+                        <p class="quantity"> <b>1</b> </p>
+                      </div>
+                  </div>
+                  
+                  <div class="table-cell all">
+                    <div class="">
+                    <p><b>1500 </b><small> грн</small></p>
+                    <a href="" class="main-btn sm">Повторить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="logo">
+              <a href=""><img src="css/images/logo.svg" alt=""/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
