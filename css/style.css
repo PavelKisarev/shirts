@@ -1052,8 +1052,34 @@ summary::-webkit-details-marker {
     color: var(--main-black);
 }
 
+.tab-container {
+    overflow: hidden;
+}
+
+.tabs {
+    text-align: center;
+    margin: 0 -30px;
+}
+
+.tabs .tab-lnk {
+    padding: 20px 0;
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--main-black);
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+}
+.tabs .tab-lnk.active {
+    border-bottom-color: var(--main-black);
+}
+
 .wrap-block {
     padding: 40px 0 0 0;
+}
+
+.wrap-block.active {
+    display: block !important;
 }
 
 .wrap-block.with-bg {
@@ -1115,7 +1141,16 @@ summary::-webkit-details-marker {
     .other-slogans h4 {
         font-size: 17px;
     }
-
+    .wrap-block .block-title {
+        display: none;
+    }
+    .page-title {
+        padding: 15px 0 0 0;
+    }
+    .page-title h1 {
+        font-size: 22px;
+        margin: 0;
+    }
 }
 
 @media screen and (max-width:576px){
@@ -1138,6 +1173,9 @@ summary::-webkit-details-marker {
 
     .other-slogans {
         margin-bottom: 15px;
+    }
+    .wrap-block {
+        display: none;
     }
 }
 

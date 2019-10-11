@@ -55,6 +55,16 @@
         }
     })
 
+    $(".tabs .tab-lnk").on('click', function(e){
+        e.preventDefault();
+        let tabBlock = $(this).data('tab');
+        //alert(tabBlock);
+        $('.wrap-block').removeClass('active');
+        $('.tabs .tab-lnk').removeClass('active');
+        $(this).addClass('active');
+        $('.wrap-block.'+tabBlock).addClass('active');
+    })
+
     $('.on-cursor').myPlax();
 })()
 
