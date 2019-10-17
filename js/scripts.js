@@ -55,14 +55,24 @@
         }
     })
 
-    $(".tabs .tab-lnk").on('click', function(e){
+    $(".tab-wrapper-normal .tabs .tab-lnk").on('click', function(e){
         e.preventDefault();
         let tabBlock = $(this).data('tab');
-        //alert(tabBlock);
-        $('.wrap-block').removeClass('active');
-        $('.tabs .tab-lnk').removeClass('active');
+        let tabWrapper = $(this).parents('.tab-wrapper-normal');
+        tabWrapper.find('.tab-element').removeClass('active');;
+        tabWrapper.find('.tab-lnk').removeClass('active');
         $(this).addClass('active');
-        $('.wrap-block.'+tabBlock).addClass('active');
+        $('.tab-element.'+tabBlock).addClass('active');
+    })
+
+    $(".tab-wrapper .tabs .tab-lnk").on('click', function(e){
+        e.preventDefault();
+        let tabBlock = $(this).data('tab');
+        let tabWrapper = $(this).parents('.tab-wrapper');
+        tabWrapper.find('.tab-element').removeClass('active');;
+        tabWrapper.find('.tab-lnk').removeClass('active');
+        $(this).addClass('active');
+        $('.tab-element.'+tabBlock).addClass('active');
     })
 
     $('.on-cursor').myPlax();

@@ -101,13 +101,13 @@
 
     <main>
       <section class="container">
-        <div class="row">
+        <div class="row tab-wrapper">
           <div class="col-12">
               <div class="page-title">
                   <h1>Личный кабинет</h1>
               </div>
           </div>
-          <div class="col-12 tab-container d-md-none">
+          <div class="col-12 tab-container d-sm-none">
               <div class="tabs row">
                   <div class="tab col-6">
                     <a class="tab-lnk active" data-tab="personal-info-block" role="button">Персональные<br> данные</a>
@@ -119,7 +119,7 @@
           </div>
 
           <div class="col-12 col-lg-6">
-            <div class="wrap-block with-bg personal-info-block active">
+            <div class="wrap-block with-bg personal-info-block tab-element active">
             <div class="block-title">
               <h3>Персональные данные</h3>
             </div>
@@ -181,88 +181,92 @@
           </div>
 
           <div class="col-12 col-lg-6">
-              <div class="wrap-block order-list-block">
-              <div class="block-title">
-                <h3>История заказов</h3>
-              </div>
-              <div class="order-table">
-                <div class="table-row">
-                  <div class="table-cell">дата	</div>
-                  <div class="table-cell">название товара	</div>
-                  <div class="table-cell">кол-во</div>
-                  <div class="table-cell">итого</div>
-                </div>
-                <div class="table-row">
-                  <div class="table-cell date">25.05.2019</div>
-                  <div class="table-cell">
-                      <div class="order">
-                        <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
-                        <div class="order-txt">
-                        <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+            <!-- d-none d-sm-block -->
+            <div class="wrap-block order-list-block tab-element ">
+              <div class="spec-vision-for-order-list-block">
+                  <div class="block-title">
+                      <h3>История заказов</h3>
+                  </div>
+                  <div class="order-table-history">
+                    <div class="table-row">
+                      <div class="table-cell">дата	</div>
+                      <div class="table-cell">название товара	</div>
+                      <div class="table-cell">кол-во</div>
+                      <div class="table-cell">итого</div>
+                    </div>
+                    <div class="table-row">
+                      <div class="table-cell date">25.05.2019</div>
+                      <div class="table-cell">
+                          <div class="order">
+                            <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
+                            <div class="order-txt">
+                            <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+                            </div>
+                            <p class="quantity"> <b>1</b> </p>
+                          </div>
+                      </div>
+                      
+                      <div class="table-cell all">
+                        <div class="">
+                        <p><b>3000 </b><small> грн</small></p>
+                        <a href="" class="main-btn sm">Повторить</a>
                         </div>
-                        <p class="quantity"> <b>1</b> </p>
                       </div>
-                  </div>
-                  
-                  <div class="table-cell all">
-                    <div class="">
-                    <p><b>3000 </b><small> грн</small></p>
-                    <a href="" class="main-btn sm">Повторить</a>
                     </div>
-                  </div>
-                </div>
-                <div class="table-row">
-                  <div class="table-cell date">25.05.2019</div>
-                  <div  class="table-cell">
-                    <div class="order">
-                      <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
-                      <div class="order-txt">
-                      <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
-                      </div>
-                      <p class="quantity"> <b>2</b> </p>
-                    </div>
-                    <div class="order">
-                      <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
-                      <div class="order-txt">
-                        <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
-                        <a href="" class="shirtsID-btn"><img src="css/images/shirtsid.svg" alt="" /></a>
-                        <p><span class="icon-bullet"> </span> <b>нанесение инициалов</b></p>
-                        <p class="lp20"><span><b>«DV»</b>, на Грудь, Шрифт №1, Синий цвет ниток </span></p>
-                      </div>
-                      <p class="quantity"> <b>1</b> </p>
-                    </div>
-                    
-                  </div>
-                  
-                  <div class="table-cell all">
-                    <div class="">
-                    <p><b>4500 </b><small> грн</small></p>
-                    <a href="" class="main-btn sm">Повторить</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="table-row">
-                  <div class="table-cell date">25.05.2019</div>
-                  <div class="table-cell">
-                      <div class="order">
-                        <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
-                        <div class="order-txt">
-                        <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+                    <div class="table-row">
+                      <div class="table-cell date">25.05.2019</div>
+                      <div  class="table-cell">
+                        <div class="order">
+                          <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
+                          <div class="order-txt">
+                          <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+                          </div>
+                          <p class="quantity"> <b>2</b> </p>
                         </div>
-                        <p class="quantity"> <b>1</b> </p>
+                        <div class="order">
+                          <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
+                          <div class="order-txt">
+                            <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+                            <a href="" class="shirtsID-btn"><img src="css/images/shirtsid.svg" alt="" /></a>
+                            <p><span class="icon-bullet"> </span> <b>нанесение инициалов</b></p>
+                            <p class="lp20"><span><b>«DV»</b>, на Грудь, Шрифт №1, Синий цвет ниток </span></p>
+                          </div>
+                          <p class="quantity"> <b>1</b> </p>
+                        </div>
+                        
                       </div>
-                  </div>
-                  
-                  <div class="table-cell all">
-                    <div class="">
-                    <p><b>1500 </b><small> грн</small></p>
-                    <a href="" class="main-btn sm">Повторить</a>
+                      
+                      <div class="table-cell all">
+                        <div class="">
+                        <p><b>4500 </b><small> грн</small></p>
+                        <a href="" class="main-btn sm">Повторить</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table-row">
+                      <div class="table-cell date">25.05.2019</div>
+                      <div class="table-cell">
+                          <div class="order">
+                            <a href=""><img class="order-item-img" src="css/images/shirt.png" alt=""></a>
+                            <div class="order-txt">
+                            <p> Мужская голубая рубашка  “standart”, <span>размер:</span> S</p>
+                            </div>
+                            <p class="quantity"> <b>1</b> </p>
+                          </div>
+                      </div>
+                      
+                      <div class="table-cell all">
+                        <div class="">
+                        <p><b>1500 </b><small> грн</small></p>
+                        <a href="" class="main-btn sm">Повторить</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
               </div>
-              </div>
+            </div>
           </div>
+
         </div>
       </section>
     </main>
@@ -270,10 +274,14 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-4 d-none d-md-block"></div>
+          <div class="col-6 col-md-4">
             <div class="logo">
               <a href=""><img src="css/images/logo.svg" alt=""/></a>
             </div>
+          </div>
+          <div class="col-6 col-md-4 text-right garanty">
+            <a href="">Гарантия</a>/<a href="">Возврат</a>
           </div>
         </div>
       </div>
