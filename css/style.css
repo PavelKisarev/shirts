@@ -488,6 +488,10 @@ main {
     text-align: center;
 }
 
+.in-cart .main-btn {
+    margin-bottom: 10px;
+}
+
 .in-cart .success-add {
     color: #25af00;
     font-weight: 700;
@@ -671,7 +675,7 @@ summary::-webkit-details-marker {
 }
 
 .main-btn {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     padding: 6px 20px;
     display: block;
     font-size: 16px;
@@ -907,7 +911,17 @@ summary::-webkit-details-marker {
 }
 
 .page-title {
+    position: relative;
     padding: 50px 0;
+}
+
+.page-descr p{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.success-sign {
+    max-width: 130px;
 }
 
 .page-title h1{
@@ -917,9 +931,47 @@ summary::-webkit-details-marker {
     text-align: center;
 }
 
+.page-title .continue {
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.page-title .continue a {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #194699;
+}
+
+.page-title .continue span {
+    border-bottom: 1px solid #6e82b5;
+}
+
 .block-title {
+    position: relative;
     text-align: center;
     margin-bottom:30px;
+}
+
+.block-title .continue {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.block-title .continue a {
+    padding:0 10px 8px 10px;
+    font-size: 32px;
+    line-height: 15px;
+    border: 1px solid var(--main-black);
+    border-radius: 4px;
+    color:var(--main-blue);
 }
 
 .block-title h3 {
@@ -936,6 +988,7 @@ summary::-webkit-details-marker {
 .order-table .table-row{
     display: grid;
     grid-template-columns: 115px 1fr 120px 120px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .order-table .table-row:first-of-type .table-cell,
@@ -987,7 +1040,6 @@ summary::-webkit-details-marker {
     grid-column-start: 2;
     grid-column-end: -1;
     border-top: 1px solid #f0f0f0;
-    border-bottom: 1px solid #f0f0f0;
 }
 
 .order-table-history .table-cell.date {
@@ -1084,6 +1136,26 @@ summary::-webkit-details-marker {
 .order-table .table-cell span,
 .order-table-history .table-cell span {
     color:#999999;
+}
+
+.total-price-row {
+    padding: 20px 0;
+}
+
+.total-txt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.total-order-price {
+    text-transform: none;
+}
+
+.total-order-price b {
+    font-size: 18px;
 }
 
 .personal-form {
@@ -1192,7 +1264,19 @@ summary::-webkit-details-marker {
 
 .garanty a{
     font-size: 13px;
+    text-transform: uppercase;
     color:var(--main-black);
+}
+
+.garanty-txt h2 {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+
+.garanty-txt p {
+    margin-bottom: 40px;
 }
 
 @media screen and (max-width:768px){
@@ -1258,6 +1342,21 @@ summary::-webkit-details-marker {
     .page-title h1 {
         font-size: 22px;
         margin: 0;
+    }
+    footer .logo {
+        margin: 0;
+    }
+    .order-table .table-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .order-table .table-cell.withShirtsID {
+        grid-column-start: 1;
+    }
+    .order-table .table-cell.all {
+        text-align: left;
+    }
+    .wrap-block {
+        padding: 20px 0 0 0;
     }
 }
 
