@@ -17,6 +17,8 @@
       rel="stylesheet"
     />
 
+    <link id="additional_font" href="" rel="stylesheet">
+
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -62,13 +64,13 @@
                   <div class="order">
                     <div class="order-txt">
                       <span class="icon-close-bold"></span>
-                      <p>
+                      <p><a href="">
                         голубая рубашка <br />
-                        “standarD”
+                        “standarD”</a>
                       </p>
                       <p><b>1</b> x <b>1500</b> грн</p>
                     </div>
-                    <img src="css/images/shirt.png" alt="" />
+                    <a href=""> <img src="css/images/shirt.png" alt="" /></a>
                   </div>
                   <div class="separate-border"></div>
                   <div class="total-price">
@@ -195,7 +197,7 @@
             <div class="separate-border"></div>
             <div class="row shirtsID">
               <div class="shirtsID-block col-12 col-md-6 col-lg-4">
-                <a href="" class="shirtsID-btn">
+                <a class="shirtsID-btn" onclick="popupShirtsID()">
                   <img src="css/images/shirtsid.svg" alt="" />
                 </a>
               </div>
@@ -203,6 +205,43 @@
                 Хочешь что-то действительно особенное – добавь инициалы, либо
                 цвет ниток для пуговицы
               </p>
+              <div class="col-12 col-md-6 col-lg-4 additional_price">
+                <p><b>150</b> грн</p>
+              </div>
+              <div class="col-12 col-md-6 col-lg-8">
+                <div class="curShirtsIDSettings">
+                  <div class="custom-checkbox">
+                    <input
+                      class="custom-control-input"
+                      type="checkbox"
+                      name="initials"
+                      id="initials"
+                      checked="true"
+                    />
+                    <label class="custom-control-label" for="initials"
+                      >Нанесение инициалов
+                    </label>
+                    <b>«<span class="initials">DV</span>»</b>,
+                    <span class="posTxt">на Грудь</span>,
+                    <span class="initialsFont">Шрифт №1</span>,
+                    <span class="initialsColor">Синий цвет ниток </span>
+                  </div>
+                  <div class="custom-checkbox">
+                    <input
+                      class="custom-control-input"
+                      type="checkbox"
+                      name="thread"
+                      id="thread"
+                      checked="true"
+                    />
+                    <label class="custom-control-label" for="thread"
+                      >Цветные нитки для пуговицы
+                    </label>
+                    <b>«<span class="thread">Пуговица №2</span>»</b>,
+                    <span class="threadColor">Красный цвет ниток</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="separate-border"></div>
             <div class="row cart-add">
@@ -325,6 +364,325 @@
       </div>
     </footer>
 
+
+    <div class="popupHideLayout">
+
+    <div class="popupShirtsID" >
+        <span class="icon-close" onclick="popupShirtsID()"></span>
+    <div class="container shirtsID-container">
+        <div class="row align-items-center shirtsID-row header-row">
+            <div class="col-12 col-md-6">
+            <div class="logo">
+                <a href=""><img src="css/images/shirtsid.svg" alt=""/></a>
+            </div>
+            </div>
+            <div class="col-12 col-md-6 ">
+                <p><em>Хочешь что-то действительно особенное – добавь инициалы, либо цвет ниток для пуговицы</em></p>
+            </div>
+        </div>
+
+        <form action="">
+        <div class="row shirtsID-row INITIALS">
+            <div class="col-12">
+                <div class="form-check shirtsID-main-check ">
+                    <input class="form-check-input" type="checkbox" value="initials-container" id="initialsCheck" checked>
+                    <label class="form-check-label" for="initialsCheck">
+                        нанесение инициалов
+                    </label>
+                </div>
+            </div>
+            
+            <div class="settings-container active col-12">
+                <div class="position-block">
+                    <div class="">
+                    <img src="css/images/shirt-example.jpg" alt="">
+                    <span class="checkpoint check1" data-check-preview="check1"><span class="dot"></span></span>
+                    <span class="checkpoint check2" data-check-preview="check2"><span class="dot"></span></span>
+                    <span class="checkpoint check3" data-check-preview="check3"><span class="dot"></span></span>
+                    </div>
+                </div>
+                <div class="preview-block">
+                    <div class="forCheckImg check1">
+                        <img src="css/images/initial-example.jpg" alt="">
+                        <span class="initials-text-pos">
+                            ABC
+                        </span>
+                    </div>
+                    <div class="forCheckImg check2">
+                        <img src="css/images/shirt-example.jpg" alt="">
+                        <span class="initials-text-pos check2">
+                           ABC
+                        </span>
+                    </div>
+                    <div class="forCheckImg check3">
+                        <img src="css/images/shirt.png" alt="">
+                        <span class="initials-text-pos check3">
+                            ABC
+                        </span>
+                    </div>
+                    <p><em>Выберите место нанесения инициалов на схеме</em></p>
+                </div>
+                <div class="settings-block">
+                    <div class="form-row default-form ">
+                        <div class="form-group col-12">
+                            <label for="placeTxt" class="">Место нанесения</label>
+                            <!-- <input type="text" class="form-control" id="placeTxt" placeholder=""> -->
+                            <select class="form-control" name="" id="placeTxt">
+                                <option value="check1">В районе ребер слева</option>
+                                <option value="check2">В районе ребер слева2</option>
+                                <option value="check3">В районе ребер слева3</option>
+                            </select>
+                        </div>
+                        <div class="col-12 color forInitials">
+                            <p class="title">Цвет</p>
+                            <div class="variant-block">
+                              <a href="#" class="variant color-black active" data-color-initials="color-black">
+                                <span class="border-deco"></span>
+                                <span class="txt d-none">Черный цвет ниток</span>
+                              </a>
+                              <a href="#" class="variant color-white" data-color-initials="color-white">
+                                <span class="border-deco"></span>
+                                <span class="txt d-none">Белый цвет ниток</span>
+                              </a>
+                              <a href="#" class="variant color-blue-dark" data-color-initials="color-blue-dark">
+                                <span class="border-deco"></span>
+                                <span class="txt d-none">Синий цвет ниток</span>
+                              </a>
+                              <a href="#" class="variant color-red" data-color-initials="color-red">
+                                <span class="border-deco"></span>
+                                <span class="txt d-none">Красный цвет ниток</span>
+                              </a>
+                            </div>
+                            <input type="hidden" id="color-initials" name="" value="color-black">
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="initialTxt" class="">Текст</label>
+                            <input type="text" class="form-control" id="initialTxt" value="ABC" placeholder="" maxlength="3">
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="initialFont" class="">Шрифт</label>
+                            <!-- <input type="text" class="form-control" id="initialFont" placeholder=""> -->
+                            <select class="form-control" name="" id="initialFont">
+                                <option value="0" data-font-fam="Pacifico">Шрифт №1</option>
+                                <option value="1" data-font-fam="Modak">Шрифт №2</option>
+                                <option value="2" data-font-fam="Indie Flower">Шрифт №3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-layout"></div>
+            </div>
+        </div>
+
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+        <div class="row shirtsID-row THREAD">
+            <div class="col-12">
+                <div class="form-check shirtsID-main-check ">
+                    <input class="form-check-input" type="checkbox" value="initials-container" id="shirtButtonsColorCheck" checked>
+                    <label class="form-check-label" for="shirtButtonsColorCheck">
+                        цвет ниток для пуговицы
+                    </label>
+                </div>
+            </div>
+            
+            <div class="settings-container active col-12">
+                <div class="position-block">
+                    <div class="">
+                    <img src="css/images/shirt-example.jpg" alt="">
+                    <span class="checkpoint check4" data-check-preview="check4"><span class="dot"></span></span>
+                    <span class="checkpoint check5" data-check-preview="check5"><span class="dot"></span></span>
+                    <span class="checkpoint check6" data-check-preview="check6"><span class="dot"></span></span>
+                    <span class="checkpoint check7" data-check-preview="check7"><span class="dot"></span></span>
+                    <span class="checkpoint check8" data-check-preview="check8"><span class="dot"></span></span>
+                    <span class="checkpoint check9" data-check-preview="check9"><span class="dot"></span></span>
+                    <span class="checkpoint check10" data-check-preview="check10"><span class="dot"></span></span>
+                    <span class="checkpoint check11" data-check-preview="check11"><span class="dot"></span></span>
+                    <span class="checkpoint check12" data-check-preview="check12"><span class="dot"></span></span>
+                    <span class="checkpoint check13" data-check-preview="check13"><span class="dot"></span></span>
+                    </div>
+                </div>
+                <div class="preview-block">
+                    <div class="forCheckImg color-black">
+                        <img src="css/images/shirt-thread-color.jpg" alt="">1
+                    </div>
+                    <div class="forCheckImg color-white">
+                        <img src="css/images/shirt-thread-color.jpg" alt="">2
+                    </div>
+                    <div class="forCheckImg color-blue-dark">
+                        <img src="css/images/shirt-thread-color.jpg" alt="">3
+                    </div>
+                    <div class="forCheckImg color-red">
+                        <img src="css/images/shirt-thread-color.jpg" alt="">4
+                    </div>
+                    
+                    <p><em>Выберите место расположения пуговицы на схеме</em></p>
+                </div>
+                <div class="settings-block">
+                    <div class="form-row default-form ">
+                        <div class="form-group col-12">
+                            <label for="placeThread" class="">Расположение пуговицы</label>
+                            <!-- <input type="text" class="form-control" id="placeTxt" placeholder=""> -->
+                            <select class="form-control" name="" id="placeThread">
+                                <option value="check4">На планке №1</option>
+                                <option value="check5">На планке №2</option>
+                                <option value="check6">На планке №3</option>
+                                <option value="check7">На планке №4</option>
+                                <option value="check8">На планке №5</option>
+                                <option value="check9">На планке №6</option>
+                                <option value="check10">На планке №7</option>
+                                <option value="check11">На планке №8</option>
+                                <option value="check12">На планке №9</option>
+                                <option value="check13">На планке №10</option>
+                            </select>
+                        </div>
+                        <div class="col-12 color forThread">
+                            <p class="title">Цвет</p>
+                            <div class="variant-block">
+                                <a href="#" class="variant color-black active" data-color-thread="color-black">
+                                <span class="border-deco"></span>
+                                <span class="txt d-none">Черный цвет ниток</span>
+                                </a>
+                                <a href="#" class="variant color-white" data-color-thread="color-white">
+                                <span class="border-deco"></span>
+                                <span class="txt d-none">Белый цвет ниток</span>
+                                </a>
+                                <a href="#" class="variant color-blue-dark" data-color-thread="color-blue-dark">
+                                <span class="border-deco"></span>
+                                <span class="txt d-none">Синий цвет ниток</span>
+                                </a>
+                                <a href="#" class="variant color-red" data-color-thread="color-red">
+                                <span class="border-deco"></span>
+                                <span class="txt d-none">Красный цвет ниток</span>
+                                </a>
+                            </div>
+                            <input type="hidden" id="thread-color" name="" value="color-black" />
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="hide-layout"></div>
+            </div>
+        </div>
+
+        <!-- !!!!!!!!! -->
+
+        <div class="row shirtsID-row justify-content-center align-items-center">
+            <div class="apply-settings col-12">
+                <div class="apply-left">
+                    <p>стоимость услуги <br> <b> 150</b> грн</p>
+                </div>
+                <div class="apply-center">
+                    <button type="submit" class="main-btn">Применить</button>
+                </div>
+                <div class="apply-right">
+                <p>Товар с <img src="css/images/shirtsid.svg" alt=""> не подлежит возврату или обмену</p>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    </div>
+
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+      Launch login
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#forgotPassword">
+      Launch forgot password
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#restorePassword">
+      Launch restore password
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-main-title text-center">
+            <h3><span class="icon-account"></span> <b>Вход</b></h3>
+            <span class="icon-close" data-dismiss="modal" aria-label="close" role="button"></span>
+          </div>
+          <div class="modal-body">
+            <form action="" class="personal-form popup-form">
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <label for="loginPhone" class="">Номер телефона</label>
+                  <input type="tel" class="form-control" id="loginPhone" placeholder="">
+                </div>
+                <div class="form-group col-12">
+                  <label for="loginPassword" class="">Пароль</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="">
+                </div>
+                <div class="text-center col-12"><a href="" class="forgot-lnk" data-toggle="modal" data-dismiss="modal" data-target="#forgotPassword">Забыли пароль?</a></div>
+              </div>
+              <div class="form-row justify-content-center">
+                <div class="form-group">
+                  <button type="submit" class="btn main-btn" id="loginSubmit" placeholder="">ВОЙТИ</button>
+                </div>
+              </div>
+              <div class="form-row">
+                <p class="orDeco text-center col-12"><span>или</span></p>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-12">
+                  <a href="" class="fb-btn">войти через <b>Facebook</b></a>
+                  <a href="" class="google-btn">войти через <b>Google</b></a>
+                </div>
+              </div>
+            </form>
+          </div> 
+      </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="forgotPassword" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-main-title text-center">
+              <h3><span class="icon-account"></span> <b>Забыли пароль</b></h3>
+              <span class="icon-close" data-dismiss="modal" aria-label="close" role="button"></span>
+            </div>
+            <div class="modal-body">
+              <form action="" class="personal-form popup-form">
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label for="loginPhone" class="">Ваш номер телефона</label>
+                    <input type="tel" class="form-control" id="loginPhone" placeholder="" maxlength="13">
+                    <p class="error">К сожалению, пользователь с таким номером не найден</p>
+                  </div>
+                </div>
+                <div class="form-row justify-content-center">
+                  <div class="form-group">
+                    <button type="submit" class="btn main-btn" id="loginSubmit" placeholder="">Восстановить</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="restorePassword" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-main-title text-center">
+              <h3><b>Восстановление пароля</b></h3>
+              <span class="icon-close" data-dismiss="modal" aria-label="close" role="button"></span>
+            </div>
+            <div class="modal-body text-center">
+              <p>На ваш номер телефона был выслан новый пароль</p>
+              <!-- <span class="icon-letter"></span> -->
+            </div>
+            
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-2.2.4.js"
       integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
@@ -340,6 +698,8 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/scripts.js"></script>
+
+    <script src="js/plax.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -6,6 +6,11 @@
 
 body{
     font-family: 'Open Sans';
+    position: relative;
+}
+
+body.popupOpen {
+    overflow: hidden;
 }
 
 p {
@@ -46,6 +51,10 @@ header.fixed-style {
 
 main {
     padding-top:85px;
+}
+
+button {
+    border:none;
 }
 
 .social-links a {
@@ -180,8 +189,10 @@ main {
     cursor: pointer;
 }
 
-.price .order-txt p {
+.price .order-txt p,
+.price .order-txt a {
     margin-bottom: 0;
+    color: var(--main-black);
 }
 
 .price .order-txt b {
@@ -385,6 +396,15 @@ main {
 .color .color-blue .border-deco{
     background: #d9ecfc
 }
+.color .color-blue-dark .border-deco{
+    background: #003399
+}
+.color .color-red .border-deco{
+    background: #ff0000
+}
+.color .color-black .border-deco{
+    background: #000000
+}
 
 .color .color-white .border-deco{
     background: #ffffff
@@ -430,6 +450,36 @@ main {
     padding:9px 15px;
     border:1px solid var(--main-black);
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.additional_price {
+    color: var(--main-black);
+}
+
+.additional_price p b {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.curShirtsIDSettings  {
+    padding-left: 25px;
+}
+
+.curShirtsIDSettings .custom-checkbox {
+    margin-bottom: 10px;
+}
+
+.curShirtsIDSettings label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--main-black);
+}
+
+.curShirtsIDSettings {
+    font-size: 14px;
 }
 
 .cart-add{
@@ -1209,7 +1259,8 @@ summary::-webkit-details-marker {
     font-size: 14px;
 }
 
-.personal-form .form-control {
+.personal-form .form-control,
+.default-form .form-control {
     background: none;
     border: none;
     border-radius: 0;
@@ -1217,6 +1268,14 @@ summary::-webkit-details-marker {
     box-shadow: none;
     position: relative;
     z-index: 1;
+}
+
+.default-form .form-control {
+    padding-left: 0;
+}
+
+.default-form .form-control option{
+    margin-left: -10px;
 }
 
 .personal-form .form-group .dark-txt {
@@ -1277,6 +1336,392 @@ summary::-webkit-details-marker {
 
 .garanty-txt p {
     margin-bottom: 40px;
+}
+
+
+/* SHIRTS ID CONTAINER !!!!!! */
+.shirtsID-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.shirtsID-container .logo{
+    max-width: 210px;
+}
+
+.shirtsID-row {
+    padding: 10px 30px;
+    border-bottom: 1px dashed #a6a6a6;
+}
+
+.shirtsID-row:last-of-type {
+    border:none;
+}
+
+.header-row p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.initials-main-check {
+    display: block;
+}
+
+.shirtsID-main-check .form-check-label {
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.shirtsID-main-check .form-check-input {
+    margin-top:8px;
+    width: 15px;
+    height: 15px;
+}
+
+.settings-container {
+    display: grid;
+    grid-template-columns: 365px 1fr 220px;
+    gap: 15px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.settings-container .hide-layout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #fff;
+    opacity: 0.6;
+}
+
+.settings-container.active .hide-layout {
+    display: none;
+}
+
+.settings-container > div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.settings-container img {
+    max-width: 370px;
+    width: 100%;
+}
+
+.position-block > div {
+    position: relative;
+}
+
+.position-block .checkpoint {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    padding:3px;
+    border: 1px solid transparent;
+    transition: all 150ms ease-in-out;
+}
+
+.checkpoint.active {
+    border-color: #ff9900;
+    transform: scale(1.2);
+}
+
+.checkpoint .dot {
+    background-color: red;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: block;
+}
+
+.checkpoint.active .dot {
+    background-color: #ff9900;
+}
+
+.INITIALS .checkpoint.check1 {
+    left: 17px;
+    bottom: 38px;
+}
+.INITIALS .checkpoint.check2 {
+    left: 15px;
+    bottom: 73px;
+}
+.INITIALS .checkpoint.check3 {
+    right: 60px;
+    bottom: 73px;
+}
+
+.THREAD .checkpoint.check4 {
+    left: 17px;
+    bottom: 38px;
+}
+.THREAD .checkpoint.check5 {
+    left: 15px;
+    bottom: 73px;
+}
+.THREAD .checkpoint.check6 {
+    left: 149px;
+    bottom: 73px;
+}
+.THREAD .checkpoint.check7 {
+    left: 147px;
+    bottom: 38px;
+}
+.THREAD .checkpoint.check8 {
+    right: 84px;
+    top:30px;
+}
+.THREAD .checkpoint.check9 {
+    right: 84px;
+    top:50px;
+}
+.THREAD .checkpoint.check10 {
+    right: 84px;
+    top:80px;
+}
+.THREAD .checkpoint.check11 {
+    right: 84px;
+    top:110px;
+}
+.THREAD .checkpoint.check12 {
+    right: 84px;
+    top:145px;
+}
+.THREAD .checkpoint.check13 {
+    right: 84px;
+    top:180px;
+}
+
+
+.preview-block  {
+    justify-content: center;
+}
+
+.preview-block p {
+    margin: 0 auto;
+    max-width: 250px;
+    font-size: 18px;
+    text-align: center;
+    color: #8d8d8d;
+}
+
+.preview-block .forCheckImg {
+    display: none;
+    position: relative;
+}
+
+.preview-block .forCheckImg.active {
+    display: block;
+}
+
+.forCheckImg .initials-text-pos {
+    position: absolute;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.check1 > .initials-text-pos {
+    right: 95px;
+    bottom: 20px;
+}
+
+.preview-block img {
+    display: block;
+    object-fit: contain;
+}
+
+.preview-block img.active {
+    display: block;
+}
+
+.settings-container .settings-block {
+    align-items: flex-start;
+}
+
+.settings-block .border-deco {
+    margin-bottom: 0;
+}
+
+.settings-block .default-form label,
+.settings-block .default-form p.title{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #999999;
+}
+
+.settings-block .default-form label {
+    margin-bottom: 0;
+}
+
+.apply-settings {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:40px 0;
+}
+
+.apply-left {
+    flex:0 0 200px;
+    text-align: right;
+}
+
+.apply-left  p{
+    font-size: 12px;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.apply-left b {
+    font-size: 28px;
+}
+
+.apply-center {
+    flex:0 0 270px;
+    padding: 0 20px;
+}
+
+.apply-center .main-btn {
+    width: 100%;
+}
+
+.apply-right {
+    flex:0 0 200px;
+}
+
+.apply-right p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.apply-right img {
+    display: inline;
+    max-width: 60px;
+}
+
+
+.popupShirtsID {
+    margin: 15px auto;
+    z-index: 1032;
+    display: none;
+}
+
+.popupShirtsID.active {
+    display: block;
+}
+
+.popupHideLayout {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1031;
+    display: none;
+    overflow-y:auto;
+}
+
+.popupHideLayout.active {
+    display: block;
+}
+
+.popupShirtsID .shirtsID-container {
+    background-color: #fff;
+    border-radius: 4px;
+}
+.popupShirtsID .icon-close {
+    padding: 5px;
+    position: fixed;
+    top: 15px;
+    right: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 4px;
+    z-index: 11;
+}
+
+.popup-form{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    padding: 0;
+}
+
+.popup-form .forgot-lnk {
+    display: block;
+    margin: -15px 0 15px;
+    font-size: 14px;
+    color:var(--main-black);
+    text-decoration: underline;
+}
+
+.popup-form .orDeco {
+    position: relative;
+}
+
+.popup-form .orDeco::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 50%;
+    z-index: 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.popup-form .orDeco span {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #fff;
+}
+
+.popup-form .error {
+    color: #ff0000;
+    font-size: 12px;
+}
+
+#forgotPassword .popup-form .form-group{
+    margin: 30px 0;
+}
+
+#restorePassword .icon-close {
+    top:15px;
+    right: 15px;
+}
+
+.modal-main-title {
+    padding: 40px 0 0 0;
+}
+
+.modal-main-title h3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.modal-main-title .icon-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-main-title .icon-account {
+    font-size: 32px;
 }
 
 @media screen and (max-width:768px){
@@ -1358,6 +1803,20 @@ summary::-webkit-details-marker {
     .wrap-block {
         padding: 20px 0 0 0;
     }
+    .header-row p {
+        font-size: 15px;
+    }
+    .shirtsID-container .logo {
+        max-width: 165px;
+        margin-bottom: 10px;
+    }
+    .shirtsID-container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .shirtsID-row {
+        padding: 10px 0;
+    }
 }
 
 @media screen and (max-width:576px){
@@ -1387,12 +1846,28 @@ summary::-webkit-details-marker {
     .tab-wrapper .tab-element.active {
         display: block;
     }
+
+    .apply-settings {
+        padding: 20px 0;
+    }
+
+    .apply-center,
+    .apply-left,
+    .apply-right {
+        flex:0 0 300px;
+        text-align: center;
+        margin:0 0 15px 0;
+    }
 }
 
 @media screen and (max-width:992px){
     .left-shirt-side {
         position: relative;
         left: 0;
+    }
+
+    .settings-container {
+        grid-template-columns: 1fr;
     }
 }
 
