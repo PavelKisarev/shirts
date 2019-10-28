@@ -211,6 +211,26 @@
         $('.curShirtsIDSettings #thread').prop('checked');
     })
 
+    $('#gallery').lightGallery({
+        thumbnail:false,
+        pager: $(window).width() >= 768 ? true : false,
+        loop:true
+    });
+
+    var elems = $("#gallery a");
+	$(".product-small a").click(function(e) 
+		{
+			e.preventDefault();
+			$(".product-small a").removeClass("active");
+			$(this).addClass("active");		
+			
+			var i = $(this).index();
+			console.log(i);
+			$(elems).hide();
+			$(elems[i]).fadeIn(400); //fadeIn("slow");
+					
+	});
+
 })()
 
 

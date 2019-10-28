@@ -266,9 +266,20 @@ button {
     margin-bottom: 20px;
 }
 
+.product-main a {
+    display: none;
+}
+
+.product-main a:first-child {
+    display: inline-block;
+}
+
+/* .product-main a.active {
+    display: block;
+} */
+
 .product-main img {
     margin:0 auto;
-    display: block;
     max-width: 100%;
 }
 
@@ -278,6 +289,20 @@ button {
     right: 0;
     font-size: 24px;
     font-weight: 700;
+}
+
+.lg-backdrop{
+    background-color: #fff !important;
+}
+
+.lg-actions .lg-next, 
+.lg-actions .lg-prev,
+#lg-counter {
+    color: #fff !important;
+}
+
+.lg-toolbar .lg-icon {
+    color:#fff !important;
 }
 
 .product-small {
@@ -291,6 +316,14 @@ button {
     height: 64px;
     border-radius: 4px;
     object-fit: contain;
+}
+
+.product-small a {
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.product-small a.active {
+    border-color:var(--main-blue);
 }
 
 .product-title {
