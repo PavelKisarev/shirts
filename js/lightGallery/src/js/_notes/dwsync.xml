@@ -18,4 +18,13 @@
 <file name="lg-video.js" server="krukgara.ftp.ukraine.com.ua/krukgarage.com/test/" local="131636065410104950" remote="131635546200000000" Dst="1" />
 <file name="lg-zoom.js" server="krukgara.ftp.ukraine.com.ua/krukgarage.com/test/" local="131636065410485165" remote="131635546200000000" Dst="1" />
 <file name="lightgallery.js" server="krukgara.ftp.ukraine.com.ua/krukgarage.com/test/" local="131636065411030536" remote="131635546200000000" Dst="1" />
+<file name=".jshintrc" server="hotkot.net" local="131636065407998519" remote="132167395200000000" Dst="1" />
+<file name="lg-autoplay.js" server="hotkot.net" local="131636065408508867" remote="132167395200000000" Dst="1" />
+<file name="lg-fullscreen.js" server="hotkot.net" local="131636065408839076" remote="132167395200000000" Dst="1" />
+<file name="lg-hash.js" server="hotkot.net" local="131636065409179302" remote="132167395200000000" Dst="1" />
+<file name="lg-pager.js" server="hotkot.net" local="131636065409504515" remote="132167395200000000" Dst="1" />
+<file name="lg-thumbnail.js" server="hotkot.net" local="131636065409859753" remote="132167395200000000" Dst="1" />
+<file name="lg-video.js" server="hotkot.net" local="131636065410104950" remote="132167395200000000" Dst="1" />
+<file name="lg-zoom.js" server="hotkot.net" local="131636065410485165" remote="132167395200000000" Dst="1" />
+<file name="lightgallery.js" server="hotkot.net" local="131636065411030536" remote="132167395200000000" Dst="1" />
 </dwsync>

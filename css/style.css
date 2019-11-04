@@ -26,6 +26,87 @@ a:hover {
     text-decoration: none;
 }
 
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: #cccccc;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #000000;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+
 header {
     padding: 15px 0;
     background: #ffffff;
@@ -468,6 +549,142 @@ button {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.size-range-block {
+    position: relative;
+    display: none;
+    grid-template-columns: 1fr 200px;
+    column-gap: 10px;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.size-range-block.active {
+    display: grid;
+}
+
+.size-range-block .icon-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.size-params {
+    display: block;
+}
+
+.size-params-row {
+    display: grid;
+    grid-template-columns: 1fr 95px 50px;
+    column-gap: 20px;
+}
+
+.size-name,
+.size-elem,
+.size-value {
+    display: flex;
+    align-items: center;
+}
+
+.size-name {
+    font-size: 14px;
+}
+
+.size-value {
+    font-size: 23px;
+    text-transform: uppercase;
+    color: var(--main-gray);
+}
+
+.size-value.active {
+    color: var(--main-black);
+}
+
+#size-grid span.icon-close {
+    top: 15px;
+    right: 15px;
+}
+
+.table-cont {
+    margin: 0 15px;
+    overflow-x: auto;
+}
+
+.size-grid-table {
+    width: 100%;
+    min-width: 730px;
+}
+
+.size-grid-table tr {  
+    display: flex;
+    justify-content: center;
+}
+
+
+.size-grid-table td {
+    padding: 10px;
+    border-right: 1px solid var(--main-gray);
+    border-bottom: 1px solid var(--main-gray);
+    font-size: 14px;
+    flex: 0 0 100px;
+}
+
+.size-grid-table td:last-child {
+    border-right:none;
+}
+
+.size-grid-table tr:last-child td {
+    border-bottom: none;
+}
+
+.size-grid-table td:first-child {
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    flex:0 0 220px;
+    display: flex;
+    align-items: center;
+}
+
+.size-grid-table .double-variant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.double-variant > div {
+    flex:0 0 45px;
+    text-align: center;
+    font-size: 11px;
+    color: #999999;
+}
+
+.result-size {
+    text-align: center;
+}
+
+.result-size p {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.result-size p:last-child{
+    margin:0;
+}
+
+.result-size .current-size {
+    font-size: 90px;
+    line-height: 66%;
+}
+
+.result-size .error {
+    font-size: 12px;
+    color: #ff6600;
+    text-transform: none;
+}
+
 .shirtsID {
     padding: 10px 0;
     display: flex;

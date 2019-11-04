@@ -225,11 +225,135 @@
 			$(this).addClass("active");		
 			
 			var i = $(this).index();
-			console.log(i);
 			$(elems).hide();
 			$(elems[i]).fadeIn(400); //fadeIn("slow");
 					
-	});
+    });
+    
+    $(".size-params input[type='range']").on('input', function() {
+        let curValue = $(this).val();
+        curValue = +curValue;
+        let curValuePlace = $(this).parents('.size-params-row').find('.size-value');
+        curValuePlace.text(curValue.toFixed(1)).addClass("active");
+        // alert(typeof(curValue));
+        getShirtSize();
+    })
+
+    $(".my-params").on('click', function(){
+        $(".size-range-block").addClass("active");
+    })
+
+    $(".size-range-block .icon-close").on('click', function(){
+        $(this).parent().removeClass("active");
+    })
+
+    function getShirtSize(){
+        let neckSize = getNeckSize(),
+            handSize = getHandSize(),
+            backSize = getBackSize(),
+            chestSize = getChestSize(),
+            waistSize = getWaistSize();
+
+        let neckSizeS = false,
+            handSizeS = false,
+            backSizeS = false,
+            chestSizeS = false,
+            waistSizeS = false;
+            neckSizeM = false,
+            handSizeM = false,
+            backSizeM = false,
+            chestSizeM = false,
+            waistSizeM = false,
+            neckSizeL = false,
+            handSizeL = false,
+            backSizeL = false,
+            chestSizeL = false,
+            waistSizeL = false;
+            neckSizeXL = false,
+            handSizeXL = false,
+            backSizeXL = false,
+            chestSizeXL = false,
+            waistSizeXL = false,
+            neckSizeXXL = false,
+            handSizeXXL = false,
+            backSizeXXL = false,
+            chestSizeXXL = false,
+            waistSizeXXL = false;
+        
+        if (neckSize >= 37.0 && neckSize <= 38.0) { neckSizeS = true} else { neckSizeS = false }
+        if (handSize >= 63.5 && handSize <= 64.5) { handSizeS = true} else { handSizeS = false }
+        if (backSize >= 69.5 && backSize <= 71.0) { backSizeS = true} else { backSizeS = false }
+        if (chestSize >= 49.0 && chestSize <= 51.5) { chestSizeS = true} else { chestSizeS = false }
+        if (waistSize >= 46.0 && waistSize <= 48.5) { waistSizeS = true} else { waistSizeS = false }
+        //  alert(waistSizeS);
+        if(neckSizeS && handSizeS && backSizeS && chestSizeS && waistSizeS) {
+            $(".result-size .current-size").text("S");
+        } 
+        else {
+            if (neckSize > 38.0 && neckSize <= 40.0) { neckSizeM = true} else { neckSizeM = false }
+            if (handSize > 64.5 && handSize <= 65.5) { handSizeM = true} else { handSizeM = false }
+            if (backSize > 70.5 && backSize <= 72.0) { backSizeM = true} else { backSizeM = false }
+            if (chestSize > 51.5 && chestSize <= 54.0) { chestSizeM = true} else { chestSizeM = false }
+            if (waistSize > 48.5 && waistSize <= 51.0) { waistSizeM = true} else { waistSizeM = false }
+            if(neckSizeM && handSizeM && backSizeM && chestSizeM && waistSizeM) {
+                $(".result-size .current-size").text("M");
+            }
+            else {
+                if (neckSize > 40.0 && neckSize <= 42.0) { neckSizeL = true} else { neckSizeL = false }
+                if (handSize > 65.5 && handSize <= 66.5) { handSizeL = true} else { handSizeL = false }
+                if (backSize > 71.5 && backSize <= 73.0) { backSizeL = true} else { backSizeL = false }
+                if (chestSize > 53.0 && chestSize <= 56.5) { chestSizeL = true} else { chestSizeL = false }
+                if (waistSize > 50.0 && waistSize <= 53.5) { waistSizeL = true} else { waistSizeL = false }
+                if(neckSizeL && handSizeL && backSizeL && chestSizeL && waistSizeL) {
+                    $(".result-size .current-size").text("L");
+                }
+                else {
+                    if (neckSize > 42.0 && neckSize <= 44.0) { neckSizeXL = true} else { neckSizeXL = false }
+                    if (handSize > 66.5 && handSize <= 67.5) { handSizeXL = true} else { handSizeXL = false }
+                    if (backSize > 72.0 && backSize <= 74.0) { backSizeXL = true} else { backSizeXL = false }
+                    if (chestSize > 55.0 && chestSize <= 59.5) { chestSizeXL = true} else { chestSizeXL = false }
+                    if (waistSize > 53.0 && waistSize <= 56.0) { waistSizeXL = true} else { waistSizeXL = false }
+                    if(neckSizeXL && handSizeXL && backSizeXL && chestSizeXL && waistSizeXL) {
+                        $(".result-size .current-size").text("XL");
+                    }
+                    else {
+                        if (neckSize > 44.0 && neckSize <= 46.0) { neckSizeXXL = true} else { neckSizeXXL = false }
+                        if (handSize > 67.5 && handSize <= 69.0) { handSizeXXL = true} else { handSizeXXL = false }
+                        if (backSize > 73.5 && backSize <= 75.0) { backSizeXXL = true} else { backSizeXXL = false }
+                        if (chestSize > 57.0 && chestSize <= 61.5) { chestSizeXXL = true} else { chestSizeXXL = false }
+                        if (waistSize > 55.0 && waistSize <= 58.5) { waistSizeXXL = true} else { waistSizeXXL = false }
+                        if(neckSizeXXL && handSizeXXL && backSizeXXL && chestSizeXXL && waistSizeXXL) {
+                            $(".result-size .current-size").text("XXL");
+                        }
+                        else {$(".result-size .current-size").text("?");}
+                    }
+                }
+            }
+        }
+
+        // console.log(neckSizeXXL);
+        // console.log(handSizeXXL);
+        // console.log(backSizeXXL);
+        // console.log(chestSizeXXL);
+        // console.log(waistSizeXXL);
+
+    }
+
+    function getNeckSize(){
+        return $("#size-neck").val();
+    }
+    function getHandSize(){
+        return $("#size-hand").val();
+    }
+    function getBackSize(){
+        return $("#size-back").val();
+    }
+    function getChestSize(){
+        return $("#size-chest").val();
+    }
+    function getWaistSize(){
+        return $("#size-waist").val();
+    }
 
 })()
 
