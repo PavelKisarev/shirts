@@ -234,10 +234,18 @@
         let curValue = $(this).val();
         curValue = +curValue;
         let curValuePlace = $(this).parents('.size-params-row').find('.size-value');
-        curValuePlace.text(curValue.toFixed(1)).addClass("active");
+        curValuePlace.val(curValue.toFixed(1)).addClass("active");
         // alert(typeof(curValue));
         getShirtSize();
     })
+
+    $(".size-value").on('change', function(){
+        $(this).addClass('active');
+        $(this).siblings('.size-elem').find('input').val($(this).val());
+        getShirtSize();
+    })
+
+    $(".size-value").mask("99.9");
 
     $(".my-params").on('click', function(){
         $(".size-range-block").addClass("active");
@@ -246,6 +254,8 @@
     $(".size-range-block .icon-close").on('click', function(){
         $(this).parent().removeClass("active");
     })
+
+    
 
     function getShirtSize(){
         let neckSize = getNeckSize(),
@@ -288,6 +298,7 @@
         //  alert(waistSizeS);
         if(neckSizeS && handSizeS && backSizeS && chestSizeS && waistSizeS) {
             $(".result-size .current-size").text("S");
+            $(".result-size .error").removeClass('active');
         } 
         else {
             if (neckSize > 38.0 && neckSize <= 40.0) { neckSizeM = true} else { neckSizeM = false }
@@ -297,6 +308,7 @@
             if (waistSize > 48.5 && waistSize <= 51.0) { waistSizeM = true} else { waistSizeM = false }
             if(neckSizeM && handSizeM && backSizeM && chestSizeM && waistSizeM) {
                 $(".result-size .current-size").text("M");
+                $(".result-size .error").removeClass('active');
             }
             else {
                 if (neckSize > 40.0 && neckSize <= 42.0) { neckSizeL = true} else { neckSizeL = false }
@@ -306,6 +318,7 @@
                 if (waistSize > 50.0 && waistSize <= 53.5) { waistSizeL = true} else { waistSizeL = false }
                 if(neckSizeL && handSizeL && backSizeL && chestSizeL && waistSizeL) {
                     $(".result-size .current-size").text("L");
+                    $(".result-size .error").removeClass('active');
                 }
                 else {
                     if (neckSize > 42.0 && neckSize <= 44.0) { neckSizeXL = true} else { neckSizeXL = false }
@@ -315,6 +328,7 @@
                     if (waistSize > 53.0 && waistSize <= 56.0) { waistSizeXL = true} else { waistSizeXL = false }
                     if(neckSizeXL && handSizeXL && backSizeXL && chestSizeXL && waistSizeXL) {
                         $(".result-size .current-size").text("XL");
+                        $(".result-size .error").removeClass('active');
                     }
                     else {
                         if (neckSize > 44.0 && neckSize <= 46.0) { neckSizeXXL = true} else { neckSizeXXL = false }
@@ -324,8 +338,12 @@
                         if (waistSize > 55.0 && waistSize <= 58.5) { waistSizeXXL = true} else { waistSizeXXL = false }
                         if(neckSizeXXL && handSizeXXL && backSizeXXL && chestSizeXXL && waistSizeXXL) {
                             $(".result-size .current-size").text("XXL");
+                            $(".result-size .error").removeClass('active');
                         }
-                        else {$(".result-size .current-size").text("?");}
+                        else {
+                            $(".result-size .current-size").text("?");
+                            $(".result-size .error").addClass('active');
+                        }
                     }
                 }
             }
