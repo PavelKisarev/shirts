@@ -55,6 +55,12 @@
         }
     })
 
+    $(".personal-form input, .personal-form textarea").each(function(i){
+        if($(this).val() !== ""){
+            $(this).parent().find("label").addClass("active");
+        }
+    })
+
     $(".tab-wrapper-normal .tabs .tab-lnk").on('click', function(e){
         e.preventDefault();
         let tabBlock = $(this).data('tab');
@@ -211,6 +217,7 @@
         $('.curShirtsIDSettings #thread').prop('checked');
     })
 
+
     $('#gallery').lightGallery({
         thumbnail:false,
         pager: $(window).width() >= 768 ? true : false,
@@ -230,6 +237,8 @@
 					
     });
     
+    
+
     $(".size-params input[type='range']").on('input', function() {
         let curValue = $(this).val();
         curValue = +curValue;
@@ -238,6 +247,8 @@
         // alert(typeof(curValue));
         getShirtSize();
     })
+
+    
 
     $(".size-value").on('change', function(){
         $(this).addClass('active');
@@ -255,7 +266,6 @@
         $(this).parent().removeClass("active");
     })
 
-    
 
     function getShirtSize(){
         let neckSize = getNeckSize(),
@@ -372,6 +382,16 @@
     function getWaistSize(){
         return $("#size-waist").val();
     }
+
+    $(".shirts-preview").slick({
+        autoplay:true,
+        autoplaySpeed: 5000,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        fade: true,
+        cssEase: 'linear',
+        speed: 2000,
+    });
 
 })()
 
