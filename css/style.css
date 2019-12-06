@@ -2130,9 +2130,16 @@ summary::-webkit-details-marker {
     }
 
     .main-shirt-block {
-        position: absolute;
-        right: -120px;
-        width: 300px;
+        position: absolute !important;
+        left: auto !important;
+        right: -120px !important;
+        width: 300px !important;
+        height: auto !important;
+    }
+
+    .slick-list {
+        overflow: visible !important;
+        transform: none !important;
     }
 
     .other-slogans {
